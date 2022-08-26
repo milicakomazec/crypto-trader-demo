@@ -1,7 +1,7 @@
-import "./App.css";
+import React from "react"
 
-function App() {
-  return <div></div>;
+const App = () => {
+  return <div />
 }
 
-export default App;
+export default App
