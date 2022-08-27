@@ -5,14 +5,16 @@ import React from "react"
 import NavItem from "../NavItem"
 
 const NavBar = () => {
-  const items = [
+  const navigation = [
     {
       title: "Home",
       img: "home.png",
+      path: "/",
     },
     {
       title: "Favorites",
       img: "star.png",
+      path: "/favorites",
     },
     {
       title: "Login",
@@ -21,9 +23,12 @@ const NavBar = () => {
   ]
   return (
     <div className="nav-container">
-      {items.map(item => (
-        <NavItem title={item.title} img={item.img} />
-      ))}
+      {navigation.map(item => {
+        // if (item.title === "Favorites") {
+        //   return null
+        // }
+        return <NavItem title={item.title} img={item.img} path={item.path} />
+      })}
     </div>
   )
 }

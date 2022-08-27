@@ -1,12 +1,17 @@
 import React from "react"
+import { Route, Routes } from "react-router-dom"
 
-import Layout from "./components/Layout"
+import DetailsPage from "./pages/DetailsPage"
+import FavoritesPage from "./pages/FavoritesPage"
+import HomePage from "./pages/HomePage"
 
 const App = () => {
   return (
-    <div>
-      <Layout />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/details" element={<DetailsPage />} />
+      <Route path="/favorites" element={<FavoritesPage />} />
+    </Routes>
   )
 }
 
