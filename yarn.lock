@@ -8159,6 +8159,11 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-use-media-query@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-use-media-query/-/react-use-media-query-1.0.3.tgz#d06211ce93fad7a7da631865aa9afbe18dfaefea"
+  integrity sha512-vMAxgq+iq5tacPKo5Y0G6upQxQ123Jgdn1/fBj2qyC4+aqJC2Mo9I8T85MPhCUqyPAgKQ6Wt6rr47D5uatC4oQ==
+
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
