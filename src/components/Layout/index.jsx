@@ -2,13 +2,12 @@ import "./Layout.scss"
 
 import React from "react"
 
-import NavBar from "../NavBar"
-import Table from "../Table"
+import Header from "../Header"
 
 const Layout = ({ children }) => {
   return (
     <div className="layout-container">
-      <NavBar />
+      <Header />
       <div className="layout-content">{children}</div>
     </div>
   )

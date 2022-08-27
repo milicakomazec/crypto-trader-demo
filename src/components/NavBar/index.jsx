@@ -16,10 +16,10 @@ const NavBar = () => {
       img: "star.png",
       path: "/favorites",
     },
-    {
-      title: "Login",
-      img: "login.png",
-    },
+    // {
+    //   title: "Login",
+    //   img: "login.png",
+    // },
   ]
   return (
     <div className="nav-container">
@@ -27,7 +27,7 @@ const NavBar = () => {
         // if (item.title === "Favorites") {
         //   return null
         // }
-        return <NavItem title={item.title} img={item.img} path={item.path} />
+        return <NavItem title={item.title} img={item.img} path={item.path} key={item.title} />
       })}
     </div>
   )

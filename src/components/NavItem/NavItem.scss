@@ -35,26 +35,6 @@
   width: 100%;
 }
 
-.nav-item:last-child {
-  margin-left: auto;
-}
-.nav-item:last-child:before {
-  width: 100%;
-  height: 2px;
-  content: "";
-  background: #fff;
-  opacity: 0.3;
-  transition: all 0.3s;
-}
-
-.nav-item:last-child:hover::before {
-  height: 100%;
-}
-
-.nav-item:last-child:after {
-  height: 0;
-}
-
 .nav-icon {
   width: 25px;
   height: 25px;
