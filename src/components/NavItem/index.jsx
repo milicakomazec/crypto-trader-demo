@@ -1,7 +1,7 @@
 import "./NavItem.scss"
 
 import React from "react"
-import useMediaQuery from "react-use-media-query"
+import { useMediaQuery } from "react-responsive"
 
 const NavItem = ({ title, img }) => {
   const isMobile = useMediaQuery({
