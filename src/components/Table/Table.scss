@@ -1,0 +1,25 @@
+.tbl-wide,
+.tbl-narrow {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px auto;
+  border: 1px solid #28282b;
+  box-shadow: 1px 1px 1px #525254;
+}
+
+th,
+tr,
+td {
+  border: 2px solid #28282b;
+  height: 50px;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+.tbl-container {
+  margin: 40px 30px;
+}
+
+th {
+  text-align: center;
+  font-weight: 900;
+}
