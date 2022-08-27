@@ -15,10 +15,6 @@ const NavBar = () => {
       img: "star.png",
     },
     {
-      title: "Details",
-      img: "enter.png",
-    },
-    {
       title: "Login",
       img: "login.png",
     },
