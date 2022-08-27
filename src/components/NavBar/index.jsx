@@ -8,21 +8,25 @@ const NavBar = () => {
   const items = [
     {
       title: "Home",
+      img: "home.png",
     },
     {
       title: "Favorites",
+      img: "star.png",
     },
     {
       title: "Details",
+      img: "enter.png",
     },
     {
       title: "Login",
+      img: "login.png",
     },
   ]
   return (
     <div className="nav-container">
       {items.map(item => (
-        <NavItem title={item.title} />
+        <NavItem title={item.title} img={item.img} />
       ))}
     </div>
   )
