@@ -16,10 +16,6 @@ const NavBar = () => {
       img: "star.png",
       path: "/favorites",
     },
-    // {
-    //   title: "Login",
-    //   img: "login.png",
-    // },
   ]
   return (
     <div className="nav-container">
