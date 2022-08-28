@@ -5,25 +5,26 @@ import React from "react"
 import NavItem from "../NavItem"
 
 const NavBar = () => {
-  const navigation = [
-    {
-      title: "Home",
-      img: "home.png",
-      path: "/",
-    },
-    {
-      title: "Favorites",
-      img: "star.png",
-      path: "/favorites",
-    },
-  ]
+  const loggedIn = localStorage.getItem("loggedIn")
+  const getNavItems = () => {
+    const navigation = [
+      {
+        title: "Home",
+        path: "/",
+      },
+    ]
+    if (loggedIn === "true") {
+      navigation.push({
+        title: "Favorites",
+        path: "/favorites",
+      })
+    }
+    return navigation
+  }
   return (
     <div className="nav-container">
-      {navigation.map(item => {
-        // if (item.title === "Favorites") {
-        //   return null
-        // }
-        return <NavItem title={item.title} img={item.img} path={item.path} key={item.title} />
+      {getNavItems().map(item => {
+        return <NavItem title={item.title} path={item.path} key={item.title} />
       })}
     </div>
   )
