@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react"
 import { TICKER_FORMAT } from "../constants/dataFormat"
 
 // eslint-disable-next-line import/prefer-default-export
-export const useSubscribeToSymbols = (subscribtionChannel, symbols, ready = true) => {
+export const useSubscribeToSymbols = (subscriptionChannel, symbols, ready = true) => {
   const [data, setData] = useState({})
   const [currencies, setCurrencies] = useState({})
   const ws = useRef(null)
@@ -12,16 +12,16 @@ export const useSubscribeToSymbols = (subscribtionChannel, symbols, ready = true
     if (!ready) return
     ws.current = new WebSocket("wss://api-pub.bitfinex.com/ws/2")
 
-    const listOfSubscribtions = symbols.map(item => {
+    const listOfSubscriptions = symbols.map(item => {
       return {
         event: "subscribe",
-        channel: subscribtionChannel,
+        channel: subscriptionChannel,
         symbol: item,
       }
     })
 
     ws.current.onopen = () => {
-      listOfSubscribtions.forEach(item => {
+      listOfSubscriptions.forEach(item => {
         ws.current.send(JSON.stringify(item))
       })
     }
