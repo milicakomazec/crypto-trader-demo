@@ -47,17 +47,3 @@
 .nav-title {
   text-shadow: 1px 0.9px 1px #525254;
 }
-
-@media only screen and (max-width: 700px) {
-  .nav-item {
-    font-size: 18px;
-    margin: 0 10px;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .nav-item {
-    font-size: 15px;
-    margin: 0 5px;
-  }
-}

@@ -70,6 +70,7 @@ const HomePage = () => {
       return subscriptionData.data.map(item => {
         return (
           <SingleTableItem
+            onClick={() => navigate(`/details/${item.name.toLowerCase()}`)}
             fields={[
               { name: "Symbol", value: item.name },
               { name: "Last price", value: item.last_price },

@@ -1,0 +1,13 @@
+.single-table-item-container {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  margin-bottom: 20px;
+
+  .field-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
