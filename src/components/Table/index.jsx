@@ -20,7 +20,7 @@ const Table = ({ tblHeaders, tblData, tblOnClick }) => {
             {tblData.map(row => (
               <tr>
                 <td>
-                  <span role="button" onClick={tblOnClick}>
+                  <span className="symbol" role="button" onClick={tblOnClick}>
                     {row.name}
                   </span>
                 </td>
