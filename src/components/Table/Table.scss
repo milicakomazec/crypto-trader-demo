@@ -1,5 +1,4 @@
-.tbl-wide,
-.tbl-narrow {
+.tbl {
   border-collapse: collapse;
   width: 100%;
   margin: 20px auto;
@@ -22,8 +21,4 @@ td {
 th {
   text-align: center;
   font-weight: 900;
-}
-
-.symbol {
-  cursor: pointer;
 }
