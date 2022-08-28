@@ -1,6 +1,7 @@
 import "./HomePage.scss"
 
 import React from "react"
+import { useNavigate } from "react-router"
 
 import Layout from "../../components/Layout"
 import Table from "../../components/Table"
@@ -39,10 +40,14 @@ const HomePage = () => {
       id: "6",
     },
   ]
-
+  const detailsNavigation = useNavigate()
+  const path = "/details"
+  const openDetailsFromHome = () => {
+    detailsNavigation(path)
+  }
   return (
     <Layout>
-      <Table tblHeaders={tblHeaders} tblData={data} />
+      <Table tblHeaders={tblHeaders} tblData={data} tblOnClick={openDetailsFromHome} />
     </Layout>
   )
 }

@@ -3,11 +3,10 @@ import "./Table.scss"
 import React from "react"
 import { useMediaQuery } from "react-responsive"
 
-const Table = ({ tblHeaders, tblData }) => {
+const Table = ({ tblHeaders, tblData, tblOnClick }) => {
   const isMobile = useMediaQuery({
     query: "(max-width: 480px)",
   })
-
   return (
     <div className="tbl-container">
       {!isMobile && (
@@ -20,7 +19,11 @@ const Table = ({ tblHeaders, tblData }) => {
           <tbody>
             {tblData.map(row => (
               <tr>
-                <td>{row.name}</td>
+                <td>
+                  <span role="button" onClick={tblOnClick}>
+                    {row.name}
+                  </span>
+                </td>
                 <td>{row.desc}</td>
                 <td>{row.id}</td>
               </tr>
@@ -31,7 +34,7 @@ const Table = ({ tblHeaders, tblData }) => {
       {isMobile &&
         tblData.map(el => (
           <table className="tbl-narrow">
-            <tr>{el.name}</tr>
+            <tr onClick={tblOnClick}>{el.name}</tr>
             <tr>{el.id}</tr>
             <tr>{el.desc}</tr>
           </table>

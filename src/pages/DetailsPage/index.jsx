@@ -9,13 +9,13 @@ const DetailsPage = () => {
   const tblHeaders = ["Name", "DESC", "ID"]
   const data = [
     {
-      name: "Milica",
-      desc: "title one dhsjhfhs",
-      id: "6",
+      name: "details",
+      desc: "details one dhsjhfhs",
+      id: "1",
     },
     {
-      name: "Boskoo",
-      desc: "bokskoodf fj",
+      name: "details",
+      desc: "details",
       id: "6",
     },
     {
