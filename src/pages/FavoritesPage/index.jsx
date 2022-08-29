@@ -80,7 +80,11 @@ const FavoritesPage = () => {
       }
       return <Table tblHeaders={tblHeaders} tblData={parseBodyData()} />
     }
-    return <div>No favorites.</div>
+    return (
+      <div className="no-fav-container">
+        <div>No favorites. Please add some.</div>
+      </div>
+    )
   }
   return <Layout>{subscriptionData.loading ? <Loading /> : getPageBody()}</Layout>
 }
